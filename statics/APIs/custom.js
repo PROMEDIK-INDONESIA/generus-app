@@ -1,0 +1,9 @@
+export const GET_LAB_RESULT = (user_id) => `https://promedik-api.demoapp.xyz/patient/lab?idPatient=${user_id}`
+
+export const GET_HOSPITAL_LIST = `https://promedik-api.demoapp.xyz/hospital?page=1&limit=10&sortBy=id.desc`
+
+export const GET_DOCTOR_LIST = `https://promedik-api.demoapp.xyz/staff/full?page=1&limit=10&orderBy=id&sortBy=desc&roleId=2`
+
+export const GET_TRANSACTION_HISTORY = `https://promedik-api.demoapp.xyz/booking?sortBy=createdAt.DESC&limit=4&page=1`
+
+export const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsImZpcnN0TmFtZSI6IkRpc2NhIiwibGFzdE5hbWUiOiJQYXNpZW4iLCJlbWFpbCI6ImRpc2NhcGFzaWVuNEBtYWlsaW5hdG9yLmNvbSIsInBob25lTnVtYmVyIjoiMDgyMjE1MDg5MDY2IiwicHJvZmlsZVBob3RvIjpudWxsLCJwYXRpZW50Ijp7ImVtZXJnZW5jeUNvbnRhY3RzIjpudWxsLCJjb21tdW5pY2F0aW9uUHJlZmVyZW5jZXMiOm51bGwsImlkIjoxMSwiaWRVc2VyIjoyMywicmVtYXJrIjpudWxsLCJuaWsiOiJmYWxzZSIsIm1lZGljYXJlTnVtYmVyIjpudWxsLCJlbWFpbEludm9pY2UiOm51bGwsIm1lZGljYWxSZWNvcmROdW1iZXIiOiJQUk8tMDAwMDkiLCJyZWZlcnJhbFR5cGUiOm51bGwsInJlZmVycmFsSWRVc2VyIjpudWxsLCJjcmVhdGVkQXQiOiIyMDIyLTA4LTAzVDAxOjQyOjU0LjMwNFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA4LTAzVDAxOjQyOjU0LjMwNFoifSwic3RhZmYiOm51bGwsImlhdCI6MTY2MDI2NjI3MH0.GyJIBx5RCTdUK8RSBkk1cdqE_IYms0RK-dJfTu-X5sY'
