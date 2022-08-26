@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TouchableOpacity, Linking, ImageBackground, ScrollView, StyleSheet, Button } from "react-native";
 import axios from "axios";
 import { GET_HOSPITAL_LIST, TOKEN } from "./statics/APIs/custom";
-import RNFS from "react-native-fs";
-import FileViewer from "react-native-file-viewer";
-import mobileAds from 'react-native-google-mobile-ads';
-import { AppOpenAd, InterstitialAd, RewardedAd, useInterstitialAd, BannerAd, TestIds } from 'react-native-google-mobile-ads';
+// import RNFS from "react-native-fs";
+// import FileViewer from "react-native-file-viewer";
+// import mobileAds from 'react-native-google-mobile-ads';
+// import { AppOpenAd, InterstitialAd, RewardedAd, useInterstitialAd, BannerAd, TestIds } from 'react-native-google-mobile-ads';
 
 
 
@@ -15,60 +15,60 @@ export const HospitalBlock = (props) => {
   useEffect(() => {
     GetHospitalList()
 
-    mobileAds()
-      .initialize()
-      .then(adapterStatuses => {
-        // Initialization complete!
-      });
+    // mobileAds()
+    //   .initialize()
+    //   .then(adapterStatuses => {
+    //     // Initialization complete!
+    //   });
   }, [])
 
-  useEffect(() => {
-    // Start loading the interstitial straight away
-    load();
-  }, [load]);
+  // useEffect(() => {
+  //   // Start loading the interstitial straight away
+  //   load();
+  // }, [load]);
 
-  useEffect(() => {
-    if (isClosed) {
-      // Action after the ad is closed
-      // navigation.navigate('NextScreen');
-    }
-  }, [isClosed, navigation]);
+  // useEffect(() => {
+  //   if (isClosed) {
+  //     // Action after the ad is closed
+  //     // navigation.navigate('NextScreen');
+  //   }
+  // }, [isClosed, navigation]);
 
-  const { isLoaded, isClosed, load, show } = useInterstitialAd(TestIds.Interstitial, {
-    requestNonPersonalizedAdsOnly: true,
-  });
+  // const { isLoaded, isClosed, load, show } = useInterstitialAd(TestIds.Interstitial, {
+  //   requestNonPersonalizedAdsOnly: true,
+  // });
 
-  const url =
-    "https://github.com/vinzscam/react-native-file-viewer/raw/master/docs/react-native-file-viewer-certificate.pdf";
+  // const url =
+  //   "https://github.com/vinzscam/react-native-file-viewer/raw/master/docs/react-native-file-viewer-certificate.pdf";
 
   // *IMPORTANT*: The correct file extension is always required.
   // You might encounter issues if the file's extension isn't included
   // or if it doesn't match the mime type of the file.
   // https://stackoverflow.com/a/47767860
-  function getUrlExtension(url) {
-    return url.split(/[#?]/)[0].split(".").pop().trim();
-  }
+  // function getUrlExtension(url) {
+  //   return url.split(/[#?]/)[0].split(".").pop().trim();
+  // }
 
-  const extension = getUrlExtension(url);
+  // const extension = getUrlExtension(url);
 
   // Feel free to change main path according to your requirements.
-  const localFile = `${RNFS.DocumentDirectoryPath}/temporaryfile.${extension}`;
+  // const localFile = `${RNFS.DocumentDirectoryPath}/temporaryfile.${extension}`;
 
-  const options = {
-    fromUrl: url,
-    toFile: localFile,
-  };
+  // const options = {
+  //   fromUrl: url,
+  //   toFile: localFile,
+  // };
 
-  const HandlePDF = () => {
-    RNFS.downloadFile(options)
-      .promise.then(() => FileViewer.open(localFile))
-      .then(() => {
-        // success
-      })
-      .catch((error) => {
-        // error
-      });
-  }
+  // const HandlePDF = () => {
+  //   RNFS.downloadFile(options)
+  //     .promise.then(() => FileViewer.open(localFile))
+  //     .then(() => {
+  //       // success
+  //     })
+  //     .catch((error) => {
+  //       // error
+  //     });
+  // }
 
   const GetHospitalList = async () => {
     try {
@@ -91,7 +91,7 @@ export const HospitalBlock = (props) => {
         flexDirection: 'row'
       }}
     >
-      <View>
+      {/* <View>
         <Button
           title="Navigate to next screen"
           onPress={() => {
@@ -103,13 +103,14 @@ export const HospitalBlock = (props) => {
             }
           }}
         />
-      </View>
+      </View> */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {hospitals.length > 0 && hospitals.map((hospital, idx) => {
           return (
             <TouchableOpacity
               key={idx}
-              onPress={() => HandlePDF()}
+              // onPress={() => HandlePDF()}
+              onPress={() => console.log('hehe')}
               style={{
                 width: 150,
                 height: 150,
