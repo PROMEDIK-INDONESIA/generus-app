@@ -17,6 +17,5 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
   s.dependency "RNFS"
-  s.dependency "RNGoogleMobileAds"
   s.dependency "RNFileViewer"
 end
