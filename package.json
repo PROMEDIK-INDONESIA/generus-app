@@ -16,5 +16,14 @@
   "peerDependencies": {
     "react-native": "0.61.5",
     "react": "16.9.0"
+  },
+  "dependencies": {
+    "react-native-google-mobile-ads": "^7.0.1"
+  },
+  "nativeDependencies": {
+    "react-native-google-mobile-ads": "^7.0.1"
+  },
+  "podDependencies": {
+    "RNGoogleMobileAds": "react-native-google-mobile-ads"
   }
 }
